@@ -1,0 +1,79 @@
+.simply-countdown {
+  overflow: hidden;
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  justify-content: center; /* Isi sejajar di tengah */
+  flex-wrap: wrap; /* Membungkus elemen saat ruang terbatas */
+  margin: auto;
+  gap: 100px; /* Jarak antar elemen */
+}
+
+.simply-countdown > .simply-section {
+  width: 100px; /* Lebar tetap untuk setiap kotak */
+  height: 100px; /* Tinggi tetap untuk setiap kotak */
+  display: flex;
+  flex-direction: column; /* Konten vertikal */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 2px 4px rgba(26, 20, 20, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Bayangan lembut */
+  text-align: center;
+  transition: all 0.3s ease; /* Transisi halus */
+  font-size: 50px; /* Ukuran teks default */
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 2rem; /* Ukuran angka */
+  font-weight: bold;
+  color: white; /* Warna angka putih */
+}
+
+.simply-countdown > .simply-section .simply-word {
+  font-size: 1rem; /* Ukuran label */
+  text-transform: uppercase; /* Huruf kapital */
+  color: white; /* Warna label putih */
+  margin-top: 5px;
+}
+
+/* Responsif untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  .simply-countdown {
+    transform: scale(1); /* Skalakan seluruh elemen agar lebih kecil */
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 0.1px; /* Jarak antar elemen lebih kecil */
+  }
+
+  .simply-countdown > .simply-section {
+    width: 50px; /* Lebar lebih kecil untuk perangkat mobile */
+    height: 50px; /* Tinggi lebih kecil untuk perangkat mobile */
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 2.2rem; /* Ukuran angka yang lebih besar pada perangkat mobile */
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 1.2rem; /* Ukuran label yang lebih besar pada perangkat mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .simply-countdown {
+    transform: scale(1); /* Skalakan lebih kecil lagi untuk perangkat dengan layar lebih kecil */
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .simply-countdown > .simply-section {
+    width: 5px; /* Lebar lebih kecil untuk tampilan sangat kecil */
+    height: 5px; /* Tinggi lebih kecil untuk tampilan sangat kecil */
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 2.2rem; /* Ukuran angka tetap lebih besar pada perangkat kecil */
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 1.2rem; /* Ukuran label lebih besar */
+  }
+}
